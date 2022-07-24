@@ -7,20 +7,35 @@
   <title>Document</title>
   <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
   <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+
+  <link rel="stylesheet" href="jQuery-Validation-Engine-3.0.0\jQuery-Validation-Engine-3.0.0\css\validationEngine.jquery.css">
+  <script src="jQuery-Validation-Engine-3.0.0\jQuery-Validation-Engine-3.0.0\js\jquery-1.8.2.min.js"></script><!-- jQueryも忘れないでね -->
+  <script src="jQuery-Validation-Engine-3.0.0\jQuery-Validation-Engine-3.0.0\js\jquery.validationEngine.js"></script>
+  <script src="jQuery-Validation-Engine-3.0.0\jQuery-Validation-Engine-3.0.0\js\languages\jquery.validationEngine-ja.js" charset="UTF-8"></script>
+  <script type="text/javascript">
+    $(function(){
+        //<form>タグのidを指定
+        $("#formCheck").validationEngine(
+            'attach', {
+                promptPosition: "down"//エラーメッセージ位置の指定
+            }
+        );
+    });
+</script>
 </head>
 
 
 <body>
   <h2 class="contact_ttl">お問い合わせ</h2>
-  <form action="/contact/store" method="post">
+  <form action="/contact/store" method="post" id="formCheck">
     <table class="contact-form">
       <tr>
         <th>お名前<span class="form-item-label-required">*</span></th>
         <td>
-          <input type="text" class="input-update" name="family-name" >
+          <input type="text" class="validate[required]" name="family_name">
         </td>
         <td>
-          <input type="text" class="input-update" name="last-name" />
+          <input type="text" class="input-update" name="last_name" />
         </td>
       </tr>
       <tr>
