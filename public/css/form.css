@@ -1,0 +1,52 @@
+.contact_ttl {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+
+.contact-form {
+  position: relative;
+  max-width: 800px;
+  margin:30px auto;
+  display: block;
+  width: 100%;
+  text-align: left;
+}
+
+tr{
+  margin-bottom: 5px;
+  padding: 0;
+}
+
+th {
+  padding: 15px 0 15px 15px;
+  width: 40%;
+  text-align: left;
+}
+
+td {
+  padding: 15px 0 15px 15px;
+  width: 50%;
+}
+
+.example{
+  padding-top: 0;
+  color:gray;
+}
+
+.form-item-label-required{
+  color: red;
+}
+
+.check_btn {
+  width: 300px;
+  display: block;
+  padding: 25px 0 25px;
+  margin: 0 auto;
+  background: black;
+  border-radius: 50px;
+  text-align: center;
+  color: #fff;
+  font-size: 18px;
+  position: relative;
+}
