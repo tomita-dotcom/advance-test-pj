@@ -8,6 +8,8 @@ use App\Models\Contactform;
 class ContactformFactory extends Factory
 {
     /**
+     * 
+     * 
      * Define the model's default state.
      *
      * @return array
@@ -19,7 +21,7 @@ class ContactformFactory extends Factory
             'last_name' => $this-> faker->lastName,
             'gender' => $this-> faker->boolean,
             'email' => $this->faker->safeEmail(),
-            'postcode' => $this->substr_replace(faker->postcode(), '-', 3, 0),
+            'postcode' => $this->faker->bothify('###-####'),
             'address' => $this->faker->streetAddress,
             'building_name' => $this->faker->word(),
             'opinion' => $this->faker->text,

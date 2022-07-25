@@ -22,12 +22,14 @@
         );
     });
 </script>
+
 </head>
 
 
 <body>
   <h2 class="contact_ttl">お問い合わせ</h2>
-  <form action="/contact/store" method="post" id="formCheck">
+  <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
+  <form action="/contact/post" method="post" id="formCheck" class="h-adr">
     <table class="contact-form">
       <tr>
         <th>お名前<span class="form-item-label-required">*</span></th>
@@ -45,8 +47,8 @@
       </tr>
       <tr>
         <th>性別<span class="form-item-label-required">*</span></th>
-        <td><input type="radio" class="input-update" name="sex-man" />男性</td>
-        <td><input type="radio" class="input-update" name="sex-woman" />女性</td>
+        <td><input type="radio" class="input-update" name="gender" value="男性"  />男性</td>
+        <td><input type="radio" class="input-update" name="gender" value="女性" />女性</td>
       </tr>
       <tr>
         <th>メールアドレス<span class="form-item-label-required">*</span></th>
@@ -59,10 +61,8 @@
       <tr>
         <th>郵便番号<span class="form-item-label-required">*</span></th>
         <td>
-        <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
-        <form class="h-adr">
           <span class="p-country-name" style="display:none;">Japan</span>
-          〒<input type="text" class="p-postal-code" size="8" maxlength="8" name=postcode >
+          〒<input type="text" class="p-postal-code" size="8" maxlength="8" name="postcode" >
         </td>
       </tr>
       <tr>
@@ -73,7 +73,6 @@
         <th>住所<span class="form-item-label-required">*</span></th>
         <td>
         <input type="text" class="p-region p-locality p-street-address p-extended-address" name="address"/>
-        </form>
         </td>
       </tr>
       <tr>
@@ -90,6 +89,6 @@
       </tr>
     </table>
   </form>
-  <a href="/contact/check" class=check_btn>確認</a>
+  <a href="/contact/post" class=check_btn>確認</a>
 </body>
 </html>
