@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ClientRequest;
 
 class TestController extends Controller
 {
@@ -13,17 +14,17 @@ class TestController extends Controller
         return view('form');
     }
 
-    function post(Request $request)
+    function post(ClientRequest $request)
     {
         $input = $request->only($this->formItems);
         dd($request→all());
-        $request->session()->put("form_input", $input);
+        $request->session()->put('form_input', $input);
         return view('confirmation');
     }
 
-    function check(Request $request)
+    function check(ClientRequest $request)
     {
-        $input = $request->session()->get("form_input");
+        $input = $request->session()->get('form_input');
         dd($input);
         return view('confirmation',['input' => $input]);
     }

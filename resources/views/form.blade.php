@@ -90,5 +90,11 @@
     </table>
   </form>
   <a href="/contact/post" class=check_btn>確認</a>
+
+  <?php
+ $gender= ['男性' => 1, '女性' => 2];
+?>
+
+
 </body>
 </html>
