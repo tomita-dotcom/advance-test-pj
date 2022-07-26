@@ -11,6 +11,7 @@
 <body>
   <h2 class="contact_ttl">内容確認</h2>
   <form action="/contact/store" method=POST>
+    @csrf
     <table class="contact-form">
       <th>お名前</th>
       <td>{{ $input->family_name }}</td>

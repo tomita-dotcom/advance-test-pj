@@ -15,10 +15,11 @@ use App\Http\Controllers\TestController;
 */
 
 Route::get('/', [TestController::class, 'index']);
-Route::post('/contact/post', [TestController::class, 'post']);
+Route::post('/', [TestController::class, 'post']);
 Route::get('/contact/check', [TestController::class, 'check']);
-Route::post('/contact/store', [TestController::class, 'store']);
-Route::get('/contact/complete', [TestController::class, 'complete']);
+Route::post('/contact/check', [TestController::class, 'store']);
+Route::get('/contact/thanks', [TestController::class, 'complete']);
+
 Route::get('/contact/control', [TestController::class, 'control']);
 Route::get('/contact/search', [TestController::class, 'search']);
 Route::post('/contact/delete', [TestController::class, 'delete']);

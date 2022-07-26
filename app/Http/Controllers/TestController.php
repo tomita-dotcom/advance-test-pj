@@ -14,19 +14,18 @@ class TestController extends Controller
         return view('form');
     }
 
-    function post(ClientRequest $request)
-    {
+    function post(Request $request) {
         $input = $request->only($this->formItems);
         dd($request→all());
-        $request->session()->put('form_input', $input);
-        return view('confirmation');
+        $request->session()->put("form_input", $input);
+        return redirect('/contact/check');
     }
 
-    function check(ClientRequest $request)
+    function check(Request $request)
     {
-        $input = $request->session()->get('form_input');
+        $input = $request->session()->get("form_input");
         dd($input);
-        return view('confirmation',['input' => $input]);
+        return view("confirmation",["input" => $input]);
     }
 
     function store(ClientRequest $request)

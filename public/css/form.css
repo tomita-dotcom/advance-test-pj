@@ -50,3 +50,9 @@ td {
   font-size: 18px;
   position: relative;
 }
+
+.confirmation_btn{
+  
+  color: white;
+  background-color: black;
+}

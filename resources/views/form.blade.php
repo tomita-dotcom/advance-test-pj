@@ -29,7 +29,8 @@
 <body>
   <h2 class="contact_ttl">お問い合わせ</h2>
   <script src="https://yubinbango.github.io/yubinbango/yubinbango.js" charset="UTF-8"></script>
-  <form action="/contact/post" method="post" id="formCheck" class="h-adr">
+  <form action="/" method="post" id="formCheck" class="h-adr">
+    @csrf
     <table class="contact-form">
       <tr>
         <th>お名前<span class="form-item-label-required">*</span></th>
@@ -88,12 +89,10 @@
         <td><textarea name="opinion" cols="60" rows="10"></textarea></td>
       </tr>
     </table>
+    <input type="submit" class=confirmation_btn value="確認">
   </form>
-  <a href="/contact/post" class=check_btn>確認</a>
+  
 
-  <?php
- $gender= ['男性' => 1, '女性' => 2];
-?>
 
 
 </body>

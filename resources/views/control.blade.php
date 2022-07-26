@@ -13,24 +13,41 @@
       <tr>
         <th>お名前</th>
         <td>
-          <input type="text" class="validate[required]" name="family_name">
+          <input name="family_name_keyword" type="text" value="{{ $params['family_name_keyword'] ?? null }}">
         </td>
         <td>
-          <input type="text" class="input-update" name="last_name" />
+          <input name="last_name_keyword" type="text" value="{{ $params['last_name_keyword'] ?? null }}">
         </td>
         <th>性別</th>
-        <td><input type="radio" class="input-update" name="gender" value="全て"  />全て</td>
-        <td><input type="radio" class="input-update" name="gender" value="男性"  />男性</td>
-        <td><input type="radio" class="input-update" name="gender" value="女性" />女性</td>
+        <td><input type="radio" class="input-update" name="gender_keyword" value="全て"  />全て</td>
+        <td><input type="radio" class="input-update" name="gender_keyword" value="男性"  />男性</td>
+        <td><input type="radio" class="input-update" name="gender_keyword" value="女性" />女性</td>
       </tr>
       <tr>
         <th>登録日</th>
-        <td><input type="date"><p>~</p><input type="date"></td>
+        <td><input type="date" name="date_keyword1">~<input type="date" name="date_keyword2"></td>
       </tr>
       <tr>
-        <th>メールアドレス/th>
-        <td><input type="email" class="input-update" name="email" /></td>
+        <th>メールアドレス</th>
+        <td><input type="email" class="input-update" name="email_keyword" /></td>
       </tr>
+    </table>
+    <button type="submit">検索</button><br>
+    <a href="/contact/control">リセット</a>
+  </div>
+
+  <div class="result">
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>お名前（姓）</th>
+        <th>お名前（名）</th>
+        <th>性別</th>
+        <th>メールアドレス</th>
+        <th>ご意見</th>
+        <th></th>
+      </tr>
+      <tr></tr>
     </table>
   </div>
 </body>
