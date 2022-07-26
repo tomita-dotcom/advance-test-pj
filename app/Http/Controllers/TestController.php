@@ -14,9 +14,9 @@ class TestController extends Controller
         return view('form');
     }
 
-    function post(Request $request) {
+    function post(Request $request)
+    {
         $input = $request->only($this->formItems);
-        dd($request→all());
         $request->session()->put("form_input", $input);
         return redirect('/contact/check');
     }
@@ -24,7 +24,6 @@ class TestController extends Controller
     function check(Request $request)
     {
         $input = $request->session()->get("form_input");
-        dd($input);
         return view("confirmation",["input" => $input]);
     }
 
@@ -32,9 +31,11 @@ class TestController extends Controller
     {
         $input = $request->session()->get("form_input");
         unset($input['_token']);
+        if($request->has("back")){ return redirect('/') ->withInput($input);
+        }
         Contactform::create($input);
         $request->session()->forget("form_input");
-        return view('thanks');
+        return redirect('/contact/thanks');
     }
 
     function complete()
@@ -64,4 +65,5 @@ class TestController extends Controller
         Contactform::find($request->id)->delete();
         return redirect('/contact/control');
     }
+
 }

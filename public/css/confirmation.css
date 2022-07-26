@@ -7,13 +7,13 @@
 .contact-form {
   position: relative;
   max-width: 800px;
-  margin:30px auto;
+  margin: 30px auto;
   display: block;
   width: 100%;
   text-align: left;
 }
 
-tr{
+tr {
   margin-bottom: 5px;
   padding: 0;
 }
@@ -29,16 +29,8 @@ td {
   width: 50%;
 }
 
-.example{
-  padding-top: 0;
-  color:gray;
-}
 
-.form-item-label-required{
-  color: red;
-}
-
-.confirmation_btn {
+.send_btn {
   width: 150px;
   display: block;
   padding: 25px 0 25px;
@@ -47,7 +39,7 @@ td {
   border-radius: 10px;
   text-align: center;
   color: #fff;
-  font-size: 20px;
-  font-weight: bold;
+  font-size: 18px;
   position: relative;
 }
+
