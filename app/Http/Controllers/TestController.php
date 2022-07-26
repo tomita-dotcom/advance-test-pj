@@ -35,7 +35,7 @@ class TestController extends Controller
         }
         Contactform::create($input);
         $request->session()->forget("form_input");
-        return redirect('/contact/thanks');
+        return view('thanks');
     }
 
     function complete()
