@@ -10,6 +10,7 @@
 
 .kensaku{
   max-width: 800px;
+  position: relative;
   margin: 50px auto;
   padding: 10px;
   display: block;
@@ -51,15 +52,28 @@ td {
   }
 
   a{
-    display: inline-block;
-    position: absolute;
+    width: 150px;
+    display: block;
+    padding: 25px 0 25px;
+    margin: 0 auto;
     color: black;
+    font-size: 18px;
+    position: relative;
     text-align: center;
-    left: 46%;
   }
 
   .result{
     display:block;
     position: absolute;
     left: 25%;
+  }
+
+  .result_table_head{
+    border-bottom:solid 1px black;
+  }
+
+  svg.w-5.h-5 {
+    /*paginateメソッドの矢印の大きさ調整のために追加*/
+    width: 30px;
+    height: 30px;
   }

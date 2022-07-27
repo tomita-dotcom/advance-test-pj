@@ -43,3 +43,14 @@ td {
   position: relative;
 }
 
+.reset_btn {
+  width: 150px;
+  display: block;
+  padding: 25px 0 25px;
+  margin: 0 auto;
+  color: black;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+}
+

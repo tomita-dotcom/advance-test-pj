@@ -36,14 +36,14 @@
             <td><input type="email" class="input-update" name="email" ></td>
           </tr>
         </table>
-      <button type="submit" class=kensaku_btn>検索</button><br>
-      <a href="/contact/control">リセット</a>
+        <button type="submit" class=kensaku_btn>検索</button><br>
+        <a href="/contact/control" class=reset_btn>リセット</a>
     </from>
   </div>
 
   <div class="result">
     <table>
-      <tr>
+      <tr class=result_table_head>
         <th>ID</th>
         <th>お名前（姓）</th>
         <th>お名前（名）</th>

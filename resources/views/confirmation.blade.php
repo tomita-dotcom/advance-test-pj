@@ -44,7 +44,7 @@
       </tr>
     </table>
     <input type="submit" class=send_btn value="送信">
-    <input name="back" type="submit" value="修正" />
+    <a href="/" name="back" class=back_btn >修正</a>
   </form>
 </body>
 </html>

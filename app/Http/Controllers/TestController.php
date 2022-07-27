@@ -57,6 +57,8 @@ class TestController extends Controller
         $querys =  Contactform::where('family_name',' family_name')->where('last_name','last_name')->where('email'.'email')->get();
         dd($querys);
 
+        $authors = Contactform::Paginate(6);
+
         return view('control', ['querys' => $querys]);
 
     }
