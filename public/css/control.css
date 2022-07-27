@@ -1,0 +1,65 @@
+.contact_ttl {
+  text-align: center;
+  font-size: 30px;
+  margin-top: 30px;
+}
+.kensaku_table{
+ height: 200px;
+ position: relative;
+}
+
+.kensaku{
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 10px;
+  display: block;
+  width: 100%;
+  text-align: left;
+  border: solid 1px black;
+  border-radius: 10px;
+}
+
+.name_form{
+  width: 100px;
+}
+
+tr {
+  padding-bottom: 15px;
+}
+
+th {
+  padding-left: 20px;
+  width: 150px;
+  text-align: left;
+}
+
+td {
+  width: 9%;
+}
+
+.kensaku_btn{
+    width: 150px;
+    display: block;
+    padding: 10px 0 10px;
+    margin: 0 auto;
+    background: black;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 18px;
+    position: relative;
+  }
+
+  a{
+    display: inline-block;
+    position: absolute;
+    color: black;
+    text-align: center;
+    left: 46%;
+  }
+
+  .result{
+    display:block;
+    position: absolute;
+    left: 25%;
+  }

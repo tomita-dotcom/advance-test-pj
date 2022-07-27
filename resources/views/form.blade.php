@@ -48,7 +48,7 @@
       </tr>
       <tr>
         <th>性別<span class="form-item-label-required">*</span></th>
-        <td><input type="radio" class="input-update" name="gender" value="男性"  />男性</td>
+        <td><input type="radio" class="input-update" name="gender" value="男性"  checked/>男性</td>
         <td><input type="radio" class="input-update" name="gender" value="女性" />女性</td>
       </tr>
       <tr>

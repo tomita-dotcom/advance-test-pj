@@ -25,7 +25,7 @@ class TestController extends Controller
     function check(Request $request)
     {
         $input = $request->session()->get("form_input");
-        return view("confirmation",["input" => $input]);
+        return view('confirmation',['input' => $input]);
     }
 
     function store(ClientRequest $request)
@@ -46,15 +46,18 @@ class TestController extends Controller
     }
 
     function control()
-    {
+    { 
         return view('control');
     }
 
     function search(Request $request)
     {
-        $query =  Contactform::where('family_name',' family_name_keyword')->where('last_name','last_name_keyword')->where('email'.'email_keyword')->get();
+        
+        
+        $querys =  Contactform::where('family_name',' family_name')->where('last_name','last_name')->where('email'.'email')->get();
+        dd($querys);
 
-         return view('control', ['query' => $query]);
+        return view('control', ['querys' => $querys]);
 
     }
 

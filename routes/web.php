@@ -21,5 +21,5 @@ Route::post('/contact/check', [TestController::class, 'store']);
 Route::get('/contact/thanks', [TestController::class, 'complete']);
 
 Route::get('/contact/control', [TestController::class, 'control']);
-Route::get('/contact/search', [TestController::class, 'search']);
+Route::post('/contact/control', [TestController::class, 'search']);
 Route::post('/contact/delete', [TestController::class, 'delete']);
