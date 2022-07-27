@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contactform;
 use Illuminate\Http\Request;
 use App\Http\Requests\ClientRequest;
 
@@ -30,6 +31,7 @@ class TestController extends Controller
     function store(ClientRequest $request)
     {
         $input = $request->session()->get("form_input");
+        dd($input);
         unset($input['_token']);
         if($request->has("back")){ return redirect('/') ->withInput($input);
         }
@@ -50,14 +52,10 @@ class TestController extends Controller
 
     function search(Request $request)
     {
-    $params = $request->query();
+        $query =  Contactform::where('family_name',' family_name_keyword')->where('last_name','last_name_keyword')->where('email'.'email_keyword')->get();
 
-    $users = Controlform::serach($params)->get();
+         return view('control', ['query' => $query]);
 
-    return view('control')->with([
-        'users' => $users,
-        'params' => $params,
-    ]);
     }
 
     function delete(Request $request)

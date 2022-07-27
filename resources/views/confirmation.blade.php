@@ -10,7 +10,7 @@
 </head>
 <body>
   <h2 class="contact_ttl">内容確認</h2>
-  <form action="/contact/check" method=POST>
+  <form action="/contact/check" method=post>
     @csrf
     <table class="contact-form">
       <tr>
